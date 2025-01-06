@@ -489,7 +489,7 @@ public class TST_OreProcessingFactory extends GTCM_MultiMachineBase<TST_OreProce
         return IStructureDefinition
                    .<TST_OreProcessingFactory>builder()
                    .addShape(STRUCTURE_PIECE_MAIN, transpose(shapeMain))
-                   .addElement('A', Glasses.chainAllGlasses())
+                   .addElement('A', ofBlock(GregTechAPI.sBlockCasings8,0))
                    .addElement('B', ofBlock(GregTechAPI.sBlockCasings2,4))
                    .addElement('C', ofBlock(GregTechAPI.sBlockCasings2,6))
                    .addElement('D', ofBlock(GregTechAPI.sBlockCasings2,15))
@@ -504,25 +504,24 @@ public class TST_OreProcessingFactory extends GTCM_MultiMachineBase<TST_OreProce
                                    .atLeast(InputHatch)
                                    .adder(TST_OreProcessingFactory::addFluidInputToMachineList)
                                    .dot(1)
-                                   .casingIndex(48)
-                                   .buildAndChain(GregTechAPI.sBlockCasings4,0))
+                                   .casingIndex(8)
+                                   .buildAndChain(GregTechAPI.sBlockCasings8,0))
                    .addElement('K',
                                HatchElementBuilder
                                    .<TST_OreProcessingFactory>builder()
                                    .atLeast(Energy.or(ExoticEnergy))
                                    .adder(TST_OreProcessingFactory::addEnergyHatchOrExoticEnergyHatchToMachineList)
                                    .dot(2)
-                                   .casingIndex(1024)
-                                   .buildAndChain(sBlockCasingsTT,0))
+                                   .casingIndex(8)
+                                   .buildAndChain(GregTechAPI.sBlockCasings8,0))
                    .addElement('L',
                                HatchElementBuilder
                                    .<TST_OreProcessingFactory>builder()
                                    .atLeast(InputBus, OutputBus)
                                    .adder(TST_OreProcessingFactory::addInputBusOrOutputBusToMachineList)
                                    .dot(3)
-                                   .casingIndex(48)
-                                   .buildAndChain(GregTechAPI.sBlockCasings4,0))
-                   .addElement('M', ofFrame(Materials.TungstenSteel))
+                                   .casingIndex(8)
+                                   .buildAndChain(GregTechAPI.sBlockCasings8,0))
                    .build();
     }
     /*
@@ -542,11 +541,11 @@ L -> ofBlock...(gt.blockcasings8, 7, ...); // input output buses
 M -> ofFrame...(Materials.TungstenSteel, 0, ...);
 
      */
-    private final String[][] shapeMain = new String[][] { { "AAA", "AAA", "AAA" }, { "A~A", "A A", "AAA" },
-        { "AAA", "AAA", "AAA" } };
+    private final String[][] shapeMain = new String[][] { { "AJA", "AAA", "LLL" }, { "A~A", "A A", "LLL" },
+        { "KKK", "AAA", "LLL" } };
 
     // spotless:on
-    // endregion
+    // endregiona
 
     // region Info
     @Override

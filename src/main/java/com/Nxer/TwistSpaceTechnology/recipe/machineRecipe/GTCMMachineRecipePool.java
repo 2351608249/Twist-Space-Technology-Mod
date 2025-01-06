@@ -1240,36 +1240,20 @@ public class GTCMMachineRecipePool implements IRecipePool {
             .metadata(RESEARCH_ITEM, ItemList.Ore_Processor.get(1))
             .metadata(RESEARCH_TIME, 16 * HOURS)
             .itemInputs(
-                GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.CosmicNeutronium, 64),
-                ItemList.Ore_Processor.get(64),
-                new Object[]{OrePrefixes.circuit.get(Materials.Optical), 64},
-                GTOreDictUnificator.get(OrePrefixes.rotor, Materials.Neutronium, 64),
-
-                ItemList.Electric_Motor_UEV.get(64),
-                ItemList.Electric_Pump_UEV.get(16),
-                ItemList.Conveyor_Module_UEV.get(16),
-                ItemList.Robot_Arm_UEV.get(16),
-
-                Materials.Neutronium.getNanite(16),
-                GTOreDictUnificator.get(OrePrefixes.pipeHuge, Materials.Infinity, 16),
-                GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.Neutronium, 64),
-                GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.Iridium, 64),
-
-                GTOreDictUnificator.get(OrePrefixes.plateDense, Materials.StainlessSteel, 64),
-                eM_Power.get(64),
-                GTOreDictUnificator.get(OrePrefixes.wireGt16, Materials.SuperconductorUEV, 64)
+                ItemList.Electric_Motor_LV.get(64),
+                ItemList.Electric_Pump_LV.get(16),
+                ItemList.Conveyor_Module_LV.get(16),
+                ItemList.Robot_Arm_LV.get(16)
             )
             .fluidInputs(
-                new FluidStack(solderPlasma, 144 * 512),
-                Materials.TungstenSteel.getMolten(144 * 1024),
-                Materials.Neutronium.getMolten(144 * 1024),
-                Materials.Osmiridium.getMolten(144 * 1024)
+                new FluidStack(solderIndAlloy, 144),
+                Materials.Lubricant.getFluid(144)
             )
             .itemOutputs(OreProcessingFactory.get(1))
 
-            .eut(RECIPE_UEV)
-            .duration(20 * 1800)
-            .addTo(AssemblyLine);
+            .eut(RECIPE_LV)
+            .duration(20)
+            .addTo(assembler);
 
         GTValues.RA.stdBuilder()
             .itemInputs(
