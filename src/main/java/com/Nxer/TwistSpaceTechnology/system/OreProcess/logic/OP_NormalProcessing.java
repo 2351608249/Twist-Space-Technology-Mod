@@ -329,7 +329,7 @@ public class OP_NormalProcessing {
         TST_RecipeBuilder.builder()
             .itemInputs(input)
             .itemOutputs(output)
-            .fluidInputs(Materials.Lubricant.getFluid(1))
+            .fluidInputs(Materials.Lubricant.getFluid(0))
             .noOptimize()
             .eut(OreProcessRecipeEUt)
             .duration(OreProcessRecipeDuration)

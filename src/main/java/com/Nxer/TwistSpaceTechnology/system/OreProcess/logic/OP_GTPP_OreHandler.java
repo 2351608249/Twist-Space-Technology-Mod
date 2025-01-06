@@ -52,7 +52,7 @@ public class OP_GTPP_OreHandler {
             TST_RecipeBuilder.builder()
                 .itemInputs(ore.getOre(1))
                 .itemOutputs(ore.getDust(12))
-                .fluidInputs(Materials.Lubricant.getFluid(1))
+                .fluidInputs(Materials.Lubricant.getFluid(0))
                 .eut(OreProcessRecipeEUt)
                 .duration(OreProcessRecipeDuration)
                 .addTo(GTCMRecipe.OreProcessingRecipes);
@@ -62,7 +62,7 @@ public class OP_GTPP_OreHandler {
                 TST_RecipeBuilder.builder()
                     .itemInputs(r)
                     .itemOutputs(ore.getDust(12))
-                    .fluidInputs(Materials.Lubricant.getFluid(1))
+                    .fluidInputs(Materials.Lubricant.getFluid(0))
                     .eut(OreProcessRecipeEUt)
                     .duration(OreProcessRecipeDuration)
                     .addTo(GTCMRecipe.OreProcessingRecipes);

@@ -57,7 +57,7 @@ public class OP_Bartworks_OreHandler {
             TST_RecipeBuilder.builder()
                 .itemInputs(werkstoff.get(ore, 1))
                 .itemOutputs(outputs.toArray(new ItemStack[] {}))
-                .fluidInputs(Materials.Lubricant.getFluid(1))
+                .fluidInputs(Materials.Lubricant.getFluid(0))
                 .eut(OreProcessRecipeEUt)
                 .duration(OreProcessRecipeDuration)
                 .addTo(GTCMRecipe.OreProcessingRecipes);
@@ -67,7 +67,7 @@ public class OP_Bartworks_OreHandler {
                 TST_RecipeBuilder.builder()
                     .itemInputs(r)
                     .itemOutputs(outputs.toArray(new ItemStack[] {}))
-                    .fluidInputs(Materials.Lubricant.getFluid(1))
+                    .fluidInputs(Materials.Lubricant.getFluid(0))
                     .eut(OreProcessRecipeEUt)
                     .duration(OreProcessRecipeDuration)
                     .addTo(GTCMRecipe.OreProcessingRecipes);
