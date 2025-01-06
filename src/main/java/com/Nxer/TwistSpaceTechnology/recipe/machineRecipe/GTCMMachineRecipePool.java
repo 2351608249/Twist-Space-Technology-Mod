@@ -1246,8 +1246,7 @@ public class GTCMMachineRecipePool implements IRecipePool {
                 ItemList.Robot_Arm_LV.get(16)
             )
             .fluidInputs(
-                new FluidStack(solderIndAlloy, 144),
-                Materials.Lubricant.getFluid(144)
+                new FluidStack(solderIndAlloy, 144)
             )
             .itemOutputs(OreProcessingFactory.get(1))
 
